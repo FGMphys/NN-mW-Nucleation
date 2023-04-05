@@ -1,0 +1,21 @@
+#yaml input file
+
+#Dataset Path
+dataset_folder: dataset
+
+buffer_stream_dim_ts: 1
+model_name: 'model_log'
+
+out_folder: evaluation1
+
+
+##Force and first layer routine
+proj2b_sopath: /home/francegm/Scrivania/CoarseGraining/alpha_nes_virial/bin/projdesonbasisNODEN.so
+proj3b_sopath: /home/francegm/Scrivania/CoarseGraining/alpha_nes_virial/bin/proj3bodyonbasis_2alpha1betaNODEN.so
+force2b_sopath: /home/francegm/Scrivania/CoarseGraining/alpha_nes_virial/bin/computeforce_rNODEN.so
+force3b_sopath: /home/francegm/Scrivania/CoarseGraining/alpha_nes_virial/bin/computeforce_triplNODEN.so
+press2b_sopath: /home/francegm/Scrivania/CoarseGraining/alpha_nes_virial/bin/computepress_rNODEN.so
+press3b_sopath: /home/francegm/Scrivania/CoarseGraining/alpha_nes_virial/bin/computepress_triplNODEN.so
+
+
+loss_method: huber
