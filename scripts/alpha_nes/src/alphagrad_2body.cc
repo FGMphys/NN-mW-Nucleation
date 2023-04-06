@@ -4,11 +4,9 @@
 #include "tensorflow/core/framework/op.h"
 #include "tensorflow/core/framework/shape_inference.h"
 #include "tensorflow/core/framework/op_kernel.h"
-#include <omp.h>
 #include <thread>
 
-unsigned int OMPThreadsNum=8;
-void setOMPthreads(unsigned int num){OMPThreadsNum=num;};
+
 
 
 void compute_2bodyalphagrad(double *ds,int numdes,double *alpha,int nalpha_r,
@@ -20,7 +18,6 @@ void compute_2bodyalphagrad(double *ds,int numdes,double *alpha,int nalpha_r,
   int par,b,i;
   double prevgradel;
   // costruiamo i descrittori
-#pragma omp parallel for num_threads(OMPThreadsNum)
 for (b=0;b<dimbat;b++){
 
     for (par=0;par<N;par++){

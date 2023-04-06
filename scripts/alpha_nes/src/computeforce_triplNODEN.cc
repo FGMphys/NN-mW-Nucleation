@@ -3,16 +3,10 @@
 #include "tensorflow/core/framework/op_kernel.h"
 #include <math.h>
 
-#include <omp.h>
-#include <thread>
 
 
 
 
-
-
-unsigned int OMPThreadsNum=8;
-void setOMPthreads(unsigned int num){OMPThreadsNum=num;};
 
 
 void computeforce_tripl(double* netderiv, double* desr, double* desa,
@@ -20,7 +14,6 @@ void computeforce_tripl(double* netderiv, double* desr, double* desa,
                         int* intmap_a, int nr, int na, int N, int dimbat,
                         double* force, int nsmooth_a,double* smooth_a,
                         double** type_emb3b,int nt,int* type_map){
-   #pragma omp parallel for num_threads(OMPThreadsNum)
    double delta=0.;
    double Bp_j=0.;
    double Bp_k=0.;

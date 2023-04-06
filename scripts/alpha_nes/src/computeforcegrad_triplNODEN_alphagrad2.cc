@@ -6,15 +6,13 @@
 //DA CONTROLLAREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE LA BARTE BUFF_A1_RAD
 
 
-unsigned int OMPThreadsNum=8;
-void setOMPthreads(unsigned int num){OMPThreadsNum=num;};
+
 
 void computenextgrad_tripl(double* prevgrad, double* desr, double* desa,
   double* intderiv_r, double* intderiv_a, int* intmap_r, int* intmap_a, int nr,
   int na, int N, int dimbat,double* nextgrad, double* smooth_a, int nsmooth_a, double* nextgrad2,
   double* NG,double** nextgrad_emb3b,double** type_emb3b,int nt,int* type_map){
 
-   #pragma omp parallel for num_threads(OMPThreadsNum)
    for (int b=0; b<dimbat; b++){
        for (int par=0; par<N; par++){
            int nne3bod=intmap_a[b*N*(na*2+1)+par*(na*2+1)];

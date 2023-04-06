@@ -3,12 +3,7 @@
 #include "tensorflow/core/framework/op_kernel.h"
 
 
-#include <omp.h>
-#include <thread>
 
-
-unsigned int OMPThreadsNum=8;
-void setOMPthreads(unsigned int num){OMPThreadsNum=num;};
 
 void computeSmoothMax3body(double *ds, double *ds3bod, int numdsrad,
                            int numds3bod, double *sds,
@@ -17,7 +12,6 @@ void computeSmoothMax3body(double *ds, double *ds3bod, int numdsrad,
                            int* type_map)
 {
   // costruiamo i descrittori
-#pragma omp parallel for num_threads(OMPThreadsNum)
 for (int b=0;b<dimbat;b++){
     for (int par=0;par<N;par++){
         int nne3bod=neigh3body[b*N*(numds3bod*2+1)+par*(numds3bod*2+1)];

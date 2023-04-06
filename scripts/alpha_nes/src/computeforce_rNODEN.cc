@@ -2,11 +2,6 @@
 #include "tensorflow/core/framework/shape_inference.h"
 #include "tensorflow/core/framework/op_kernel.h"
 
-#include <omp.h>
-#include <thread>
-
-unsigned int OMPThreadsNum=8;
-void setOMPthreads(unsigned int num){OMPThreadsNum=num;};
 
 
 void computeSmoothMaxForce(double *ds,int num_ds,double *alpha,int num_alpha_radiale,
@@ -17,7 +12,6 @@ void computeSmoothMaxForce(double *ds,int num_ds,double *alpha,int num_alpha_rad
   int par2,b,i;
   int numdes=num_ds;
   // costruiamo i descrittori
-#pragma omp parallel for num_threads(OMPThreadsNum)
 for (b=0;b<dimbat;b++){
 
     for (par2=0;par2<N;par2++){

@@ -3,11 +3,7 @@
 #include "tensorflow/core/framework/op_kernel.h"
 #include <iostream>
 
-#include <omp.h>
-#include <thread>
 
-unsigned int OMPThreadsNum=8;
-void setOMPthreads(unsigned int num){OMPThreadsNum=num;};
 
 
 void back_prop_grad_forceop(double* prevgrad, double* ds,int numdes,double* alpha,
@@ -20,7 +16,6 @@ void back_prop_grad_forceop(double* prevgrad, double* ds,int numdes,double* alph
 
 //info for cycle: batch-->particles-->directions--->descriptors
   for (int b=0; b<dimbat; b++){
-    #pragma omp parallel for num_threads(OMPThreadsNum)
      for (int par = 0; par < N; par++) {
          int actual=b*N*numdes+par*numdes;
          int num_neigh=nnindex[b*(N*(numdes+1))+(numdes+1)*par];
