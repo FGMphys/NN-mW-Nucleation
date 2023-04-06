@@ -8,7 +8,7 @@ buffer_stream_dim_tr: 21
 subsampling: 'no'
 
 model_name: 'model_log'
-restart:  'no' #model1 net_model
+restart:  'no' 
 residual: 'no'
 
 #Net parmater
