@@ -1,5 +1,5 @@
 # NN-mW-Nucleation
-This repository contains the dataset and the scripts to run the training of the model.
+This repository contains the scripts to run the training of the Neural Network Potential for mW nucleation.
 The following python packages are required to run the training program:
 
 1. Tensorflow==2.8 (and its dependency)
