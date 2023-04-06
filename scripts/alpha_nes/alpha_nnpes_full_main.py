@@ -7,15 +7,6 @@ import sys
 import tensorflow as tf
 
 from numpy.random import seed
-import matplotlib.pyplot as plt
-
-
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.models import Model
-
-from numpy.random import default_rng
-
-
 
 import numpy as np
 import yaml
