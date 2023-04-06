@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-#IMPORT I/O file
 import os
 import time
 import sys
@@ -201,7 +198,6 @@ opt_phys=build_optimizer(opt_phys_param,lr_phys)
 
 
 #Composing the model
-
 try:
     alpha_bound=float(full_param['alpha_bound'])
     print("alpha_nes: alphas will be upper-bound to custom",alpha_bound,sep=' ',end='\n')
@@ -258,7 +254,6 @@ except:
     val_loss=MSE
     print("alpha_nes: the loss function is MSE loss as the validation loss!")
 
-##METTERE PRESSURE LAYER NEL MODELLO E VALUTARLO SOLO NELLA VALIDATION (ogni epoca)
 
 restart_par=full_param['restart']
 if nt==1:
