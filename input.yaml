@@ -3,10 +3,12 @@
 #Dataset Path
 dataset_folder: dataset
 
+#How many frames to load simultaneously
 buffer_stream_dim_ts: 21
 buffer_stream_dim_tr: 21
 subsampling: 'no'
 
+#Output model prefix name
 model_name: 'model_log'
 restart:  'no' 
 
