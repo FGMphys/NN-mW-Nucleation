@@ -5,6 +5,11 @@ The following python packages are required to run the training program:
 1. Tensorflow==2.8 (and its dependency)
 2. pyyaml
 
+It may be useful to create a conda environment, then activate and thus run
+
+1. conda install tensorflow==2.8
+2. conda install pyyaml
+
 In the scripts/alpha_nes folder there are two files to install the paths (install_path.sh for linux and install_path_mac.sh for mac).
 The install scripts should compile also the .cc source files in the src folder.
 
