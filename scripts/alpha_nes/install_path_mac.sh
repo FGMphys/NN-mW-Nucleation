@@ -1,6 +1,5 @@
 #!/bin/sh
 actual_path=$(pwd)
-perl -i -pe's@root_path=.*@root_path='"\'$actual_path\'"'@' source_routine/descriptor_builder.py
 perl -i -pe's@root_path=.*@root_path='"\'$actual_path\'"'@' source_routine/physics_layer_mod.py
 perl -i -pe's@root_path=.*@root_path='"\'$actual_path\'"'@' source_routine/force_layer_mod.py
 perl -i -pe's@root_path=.*@root_path='"\'$actual_path\'"'@' gradient_utility/grad_threebody_par.py

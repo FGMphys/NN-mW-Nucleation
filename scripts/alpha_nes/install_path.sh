@@ -1,7 +1,6 @@
 #!/bin/sh
 actual_path=$(pwd)
 
-sed -i 's@root_path=.*@root_path='"\'$actual_path\'"'@' source_routine/descriptor_builder.py
 sed -i 's@root_path=.*@root_path='"\'$actual_path\'"'@' source_routine/physics_layer_mod.py
 sed -i 's@root_path=.*@root_path='"\'$actual_path\'"'@' source_routine/force_layer_mod.py
 sed -i 's@root_path=.*@root_path='"\'$actual_path\'"'@' gradient_utility/grad_threebody_par.py
