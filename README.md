@@ -10,7 +10,7 @@ The install scripts should compile also the .cc source files in the src folder.
 
 Once the paths are written correctly and the .cc source files are built, it is possible to run the training by 
 
-"python input.yaml"
+"python alpha_nnpes_full_main.py input.yaml"
 
 The file input.yaml is the configuration file to fix the parameters of the training as discussed in the method article (DOI: 10.1063/5.0139245).
 
