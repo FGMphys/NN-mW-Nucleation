@@ -9,7 +9,7 @@ subsampling: 'no'
 
 model_name: 'model_log'
 restart:  'no' 
-residual: 'no'
+
 
 #Net parmater
 dimension_encoder_2body: 5
