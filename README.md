@@ -21,3 +21,5 @@ The file input.yaml is the configuration file to fix the parameters of the train
 
 
 The dataset to run the training can be found on Zenodo at DOI: 10.5281/zenodo.7804928.
+
+Once the model is trained, it can be possible to compute energy and force error by running "python alpha_nnpes_full_inference_main.py input_inference.yaml". The input_inference.yaml is a configuration file for the inference run.
