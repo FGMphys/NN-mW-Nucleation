@@ -1,0 +1,7 @@
+#yaml input file
+
+#Dataset Path
+dataset_folder: dataset
+
+buffer_stream_dim_ts: 21
+model_name: 'run/model_log10'

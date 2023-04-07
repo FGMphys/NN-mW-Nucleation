@@ -63,4 +63,4 @@ class alpha_nes_full_inference(tf.Module):
                                       self.type_map)
 
 
-          return self.totenergy/2.*self.N,self.force
+          return self.totenergy/2.,self.force
