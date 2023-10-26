@@ -25,3 +25,7 @@ The dataset to run the training can be found on Zenodo at DOI: 10.5281/zenodo.78
 Once the model is trained, it can be possible to compute energy and force error by running 
 "python alpha_nnpes_full_inference_main.py input_inference.yaml" 
 The input_inference.yaml is a configuration file for the inference run.
+
+
+
+The code development was supported by ICSC—Centro Nazionale di Ricerca in High Performance Computing, Big Data and Quantum Computing, funded by the European Union—NextGenerationEU.
